@@ -1,0 +1,9 @@
+.swiper{
+  padding: 0 10px;
+}
+image{
+  width: 712rpx; 
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 10px; /* 圆角边框 */
+}

@@ -1,0 +1,76 @@
+/* 外层用户信息部分 */
+.user {
+  padding: 20px; /* 给整个用户区域添加内边距 */
+  background-color: rgb(241, 241, 241); /* 设置背景色 */
+  height: 100vh; /* 设置为视口高度，确保覆盖整个页面 */
+}
+
+/* 主按钮居中显示 */
+.main-button {
+  width: 80%; /* 调整按钮宽度，适应内容 */
+  max-width: 600px; /* 限制最大宽度 */
+  margin: 0 auto 20px; /* 按钮居中并增加底部间距 */
+}
+
+/* 用户信息部分内容的对齐与间距 */
+.content {
+  display: flex;
+  justify-content: center; /* 内容水平居中 */
+  align-items: center; /* 内容垂直居中 */
+  margin-bottom: 20px; /* 与网格内容间距 */
+}
+
+/* 用户信息单元格最大宽度设置 */
+.user_index {
+  width: 100%;
+  max-width: 600px; /* 限制最大宽度，避免内容过宽 */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px; /* 增加内边距 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+  position: relative; 
+  left: 0rpx; 
+  top: 22rpx;
+}
+
+/* 网格内容布局 */
+.grid-content {
+  margin-top: 20px; /* 给网格部分增加顶部间距 */
+  max-width: 600px; /* 限制网格最大宽度 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* van-grid 的整体样式 */
+van-grid {
+  width: 100%; /* 确保网格宽度适应容器 */
+}
+
+/* 父容器使用 flex 布局 */
+.order-header {
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+  align-items: center;
+  padding: 10rpx; /* 可根据需要调整间距 */
+}
+
+.my-order {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: bold; /* 加粗 */
+}
+
+.all-orders {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.like-title {
+  color: #333; /* 字体颜色 */
+  margin: 20px 20px; /* 调整上下间距 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: bold; /* 加粗 */
+  position: relative; 
+  left: -16rpx; 
+  top: 10rpx; 
+}

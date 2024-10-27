@@ -1,0 +1,32 @@
+<view class="user">
+  <!-- 登录按钮 -->
+  <van-button type="primary" size="large" class="main-button">未登录，点击登录</van-button>
+
+  <!-- 用户信息区域 -->
+
+  <view class="content">
+    <van-cell-group inset class="user_index">
+      <van-cell title="用户名" value="*****" />
+      <van-cell title="邮箱" value="*****@*****.com" />
+      <van-cell title="手机号" value="*****" />
+      <van-cell title="个人简介" value="这是我的个人简介。" />
+    </van-cell-group>
+  </view>
+  <!-- 我的订单 -->
+  <view class="grid-content">
+    <view class="order-header">
+      <text class="my-order">我的订单</text>
+      <text class="all-orders">全部></text>
+    </view>
+    <van-grid column-num="5">
+      <van-grid-item wx:for="{{navData}}" wx:key="text" icon="{{item.icon}}" text="{{item.text}}" />
+    </van-grid>
+  </view>
+
+  <!-- 猜你喜欢 -->
+  <view>
+    <text class="like-title">猜你喜欢</text>
+    <goods-list goodsData="{{ goodsData }}"></goods-list>
+  </view>
+
+</view>
