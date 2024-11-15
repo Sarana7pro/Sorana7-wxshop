@@ -2,6 +2,7 @@ const { getBanner, getGoods } = require("../../api/index.js");
 
 Page({
   data: {
+    userInfo:{},
     goodsData: [],
     page: 1,
     swiperOptions:{
@@ -29,11 +30,31 @@ Page({
         icon:"comment-circle-o",
       },
       {
-        text:"退款/售后",
+        text:"退款",
         icon:"balance-o",
       },]
   },
-  
+  getUserProfle() {
+    wx.getUserProfile({
+      desc: '展示用户信息', 
+      success: res => {
+        this.setData({
+          userInfo: res.userInfo
+        });
+      },
+      fail: err => {
+        wx.showToast({
+          title: '授权失败，请重新尝试',
+          icon: 'none',
+          duration: 2000
+        });
+        console.log(err); // 打印错误信息
+      },
+      complete() {
+        console.log("获取用户信息请求已完成");
+      }
+    });
+  },
   onLoad() {
     getBanner().then(res =>{
       this.setData({

@@ -1,5 +1,4 @@
 const { getBanner,getGoods } = require("../../api/index.js");
-
 Page({
 
   /**
@@ -90,6 +89,12 @@ Page({
         })
       }
       
+    })
+  },
+  // 点击搜索获得焦点
+  clickSearch(){
+    wx.navigateTo({
+      url: '/pages/search/search',
     })
   },
 

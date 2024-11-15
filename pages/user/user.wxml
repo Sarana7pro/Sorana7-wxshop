@@ -1,20 +1,17 @@
-<view class="user">
-  <!-- 登录按钮 -->
-  <van-button type="primary" size="large" class="main-button">未登录，点击登录</van-button>
+<view class="user-container">
+  <view class="header">
+    <view wx:if="{{ userInfo.nickName }}">
+      <image src="{{ userInfo.avatarUrl }}" mode="widthFix"/>
+      <text>{{ userInfo.nickName }}</text>
+    </view>
+    <view wx:else>
+      <button bindtap="getUserProfle">登录</button>
+    </view>
+   </view>
 
-  <!-- 用户信息区域 -->
-
-  <view class="content">
-    <van-cell-group inset class="user_index">
-      <van-cell title="用户名" value="*****" />
-      <van-cell title="邮箱" value="*****@*****.com" />
-      <van-cell title="手机号" value="*****" />
-      <van-cell title="个人简介" value="这是我的个人简介。" />
-    </van-cell-group>
-  </view>
   <!-- 我的订单 -->
   <view class="grid-content">
-    <view class="order-header">
+    <view class="order-header"> 
       <text class="my-order">我的订单</text>
       <text class="all-orders">全部></text>
     </view>

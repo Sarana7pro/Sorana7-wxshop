@@ -5,12 +5,14 @@
     "pages/new/new",
     "pages/cart/cart",
     "pages/user/user",
-    "pages/logs/logs",
-    "components/swiper"
+    "pages/search/search",
+    "pages/goods/goods",
+    "pages/details/details",
+    "pages/buy/buy"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "二手商城",
+    "navigationBarTitleText": "企业商城",
     "navigationBarBackgroundColor": "#ffd747"
   },
   "componentFramework": "glass-easel",
@@ -29,26 +31,20 @@
       {
         "pagePath": "pages/category/category",
         "text": "附近",
-        "iconPath": "./images/icon/around.png",
-        "selectedIconPath": "/images/icon/around_01.png"
-      },
-      {
-        "pagePath": "pages/new/new",
-        "text": "发布",
-        "iconPath": "./images/icon/publish.png",
-        "selectedIconPath": "/images/icon/publish_01.png"
+        "iconPath": "./images/icon/category.png",
+        "selectedIconPath": "./images/icon/category_01.png"
       },
       {
         "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "./images/icon/gwc.png",
-        "selectedIconPath": "/images/icon/gwc_01.png"
+        "selectedIconPath": "./images/icon/gwc_01.png"
       },
       {
         "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "./images/icon/my.png",
-        "selectedIconPath": "/images/icon/my_01.png"
+        "selectedIconPath": "./images/icon/my_01.png"
       }
     ]
   }

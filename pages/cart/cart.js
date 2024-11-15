@@ -1,11 +1,15 @@
 // pages/cart/cart.js
+const {
+  getCart,
+  delGoodsCart
+} = require("../../api/index.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cartData: []
   },
 
   /**
@@ -26,7 +30,41 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.http()
+  },
+  delCartHandle(e) {
+    delGoodsCart({
+      currentID: e.currentTarget.dataset.id  
+    }).then(res => {
+      if (res.data.status == 200) {
+        wx.showToast({
+          title: '删除成功',
+        });
+        this.http();
+      } else {
+        wx.showToast({
+          title: '删除失败',
+        });
+      }
+    });
+  },
+  
+  http() {
+    getCart().then(res => {
+      this.setData({
+        cartData: res.data.data
+      })     
+      if(res.data.msg){
+        this.setData({
+          cartData: []
+        })
+      }else{
+        this.setData({
+          cartData: res.data.data
+        })
+      }
+      
+    })
   },
 
   /**

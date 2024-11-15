@@ -1,6 +1,6 @@
 <view class="index">
   <view class="header">
-    <van-search value="{{ value }}" shape="round" background="#ffd747" placeholder="请输入你想要找的商品">
+    <van-search bind:focus="clickSearch" value="{{ value }}" shape="round" background="#ffd747" placeholder="请输入你想要找的商品">
     </van-search>
     <!-- 轮播图 -->
     <swiper swiperData="{{ swiperData }}" indicatorDots="{{swiperOptions.indicatorDots}}" autoplay="{{swiperOptions.autopla}}" interval="{{swiperOptions.interval}}" duration="{{swiperOptions. duration}}"></swiper>

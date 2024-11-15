@@ -1,18 +1,30 @@
-// pages/cart/cart/cart.js
+// pages/buy/buy.js
+const {getBuy} = require("../../api/index.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    getBuy({ id:options.id }).then(res =>{
+      console.log(res.data)
+      this.setData({
+        goodsData:res.data.data[0]
+      })
+    })
+  },
+  onSubmit(){
+    wx.showToast({
+      title: '购买完成',
+      icon:'success'
+    })
   },
 
   /**
